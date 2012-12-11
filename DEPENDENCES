@@ -2,3 +2,6 @@
 
 # python virtualenv
 virtualenv==1.8.4
+
+# python XML package (nome do pacote para o openSUSE)
+python-xml
