@@ -3,7 +3,9 @@
 # author: Gustavo Pantuza
 # since: 10.12.2012
 
+# cria o virtualenv do projeto
 env:
 	virtualenv .
 
-
+requirements: REQUIREMENTS
+	./bin/pip install -r REQUIREMENTS
