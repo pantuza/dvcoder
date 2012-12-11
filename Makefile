@@ -9,3 +9,6 @@ env:
 
 requirements: REQUIREMENTS
 	./bin/pip install -r REQUIREMENTS
+
+run: src/dvcoder/manage.py
+	./bin/python src/dvcoder/manage.py runserver 
