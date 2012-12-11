@@ -12,3 +12,6 @@ requirements: REQUIREMENTS
 
 run: src/dvcoder/manage.py
 	./bin/python src/dvcoder/manage.py runserver 
+
+static: src/dvcoder/manage.py
+	./bin/python src/dvcoder/manage.py collectstatic
