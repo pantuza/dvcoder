@@ -1,1 +1,4 @@
-virtualenv
+# Dependências do projeto a serem instaladas antes de executar o make
+
+# python virtualenv
+virtualenv==1.8.4
