@@ -1,0 +1,22 @@
+Arquivo que descreve o procedimento de instalação da 
+aplicação. 
+
+
+1. DEPENDÊNCIAS
+
+    Na raiz do projeto existe um arquivo chamado DEPENDENCES. Nele
+estão contidas todas as dependências do projeto. Essas dependências 
+devem estar instaladas antes de executar o Makefile
+
+2. INSTALAÇÃO
+
+    Todo o processo de instalação é baseado no arquivo  Makefile. Para
+a correta instalação do projeto, deve-se primeiramente executar: 
+
+    $> make env
+
+    Essa diretiva configura o virtualenv do projeto, onde todas as 
+dependências do python assim como o 'chroot' do projeto são criados. 
+O virtualenv torna a aplicação independente de outras aplicações python 
+na máquina com versões de bibliotecas diferentes. Todo o projeto pode ser
+transportado como um único diretório.
