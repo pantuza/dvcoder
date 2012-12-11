@@ -1,5 +1,9 @@
 # Django settings for dvcoder project.
 
+from os import environ
+if not environ.get('AWS_STORAGE_BUCKET_NAME'):
+    environ['AWS_STORAGE_BUCKET_NAME'] = 'dvcoder'
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -60,7 +64,7 @@ STATIC_ROOT = ''
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = '/static/'
+#STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -115,11 +119,19 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'storages', # django-storages library
+
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
+
+# amazon aws bucket name
+AWS_STORAGE_BUCKET_NAME = environ['AWS_STORAGE_BUCKET_NAME']
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
+STATIC_URL = S3_URL
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
