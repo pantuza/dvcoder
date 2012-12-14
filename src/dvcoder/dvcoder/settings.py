@@ -4,7 +4,7 @@ from os import environ
 from os import path
 
 PROJECT_ROOT = path.join(path.abspath("."), 'src/dvcoder')
-
+print PROJECT_ROOT
 if not environ.get('AWS_STORAGE_BUCKET_NAME'):
     environ['AWS_STORAGE_BUCKET_NAME'] = 'dvcoder'
 
@@ -112,6 +112,7 @@ ROOT_URLCONF = 'dvcoder.urls'
 WSGI_APPLICATION = 'dvcoder.wsgi.application'
 
 TEMPLATE_DIRS = (
+    path.join(PROJECT_ROOT, 'templates'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
