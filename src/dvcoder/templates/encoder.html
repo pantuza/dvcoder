@@ -1,1 +1,17 @@
-<h1> oi gustavo</h1>
+<!doctype html>
+<html>
+    <head>
+        <title>DV ENCODER</title>
+    </head>
+    <body>
+        <section>
+            <h3>DV File</h3>
+            <section>
+            <form method="post" name="dvform" action="/" enctype="multipart/form-data" >
+                {% csrf_token %}
+                <input type="file" name="dvfile" id="file" />
+                <input type="submit" name="dvsubmit" id="submit" />
+            </section>
+        </section>
+    </body>
+</html>
