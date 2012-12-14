@@ -1,12 +1,10 @@
 from django.conf.urls import patterns, include, url
+from encoder.views import EncoderView
 
-# Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'dvcoder.views.home', name='home'),
+    url(r'^$', EncoderView.as_view(), name='encoder'),
     # url(r'^dvcoder/', include('dvcoder.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
