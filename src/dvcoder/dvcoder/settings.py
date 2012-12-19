@@ -2,8 +2,13 @@
 
 from os import environ
 from os import path
+from socket import gethostname
 
-PROJECT_ROOT = path.join(path.abspath("."), 'src/dvcoder')
+PROJECT_ROOT = path.abspath(".")
+
+if gethostname() != 'ip-10-252-79-166':
+    PROJECT_ROOT = path.join(PROJECT_ROOT, 'src/dvcoder')
+
 print PROJECT_ROOT
 if not environ.get('AWS_STORAGE_BUCKET_NAME'):
     environ['AWS_STORAGE_BUCKET_NAME'] = 'dvcoder'
