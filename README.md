@@ -1,4 +1,5 @@
-sambatech
-=========
+DV Coder
+========
 
-Atividade Prática 1
+DV Coder converts uploaded videos to Web video stards. 
+It is written in django and uses the zencoder API.
